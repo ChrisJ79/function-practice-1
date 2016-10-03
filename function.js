@@ -1,15 +1,31 @@
-$
-
 
 
 // Exercise 1:  Write a function called 'tripleFive' which loops three times using a for loop. Each iteration of the loop, output 'Five!' using console.log.
 // tripleFive()
 // Five! Five! Five!
 
+var tripleFive = function () {
+  for (i = 0; i < 3; i++) {
+    console.log('Five!');
+  }
+};
+
+tripleFive();
+
 
 // Exercise 2:  Write a function called 'lastLetter' which takes a single string argument and returns the last character in the string.
 // lastLetter('hello') should return 'o'
 // lastLetter('island') should return 'd'
+
+
+function lastLetter (str){
+	return str.substring(str.length - 1, str.length);
+}
+
+console.log(lastLetter(""));
+
+lastLetter('hello');
+
 
 
 // Exercise 3:  Write a function called 'square' which takes a single argument which is a number, and returns number * number.
