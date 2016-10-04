@@ -123,13 +123,30 @@ tiny(14);
 tiny(-5);
 
 
-
-
-
 // Exercise 10:  Write a function called 'getSeconds' which takes a single string argument in the format 'MM:SS' (minutes, and seconds) and returns the total number of seconds represented by that timespan.
 // getSeconds('01:30') should return 90
 // getSeconds('10:25') should return 625
 
-var getSeconds = function () {
 
+var getSeconds = function (totalTime) {
+  var minutesString = totalTime.substring(0,2);
+  var secondsString = totalTime.substring(3, 2);
+  var minutes = parseInt(minutesString);
+  var seconds = parseInt(minutesString);
+  return minutes * 60 + seconds;
 };
+console.log(getSeconds('01:30') === 90, 'getSeconds');
+console.log(getSeconds('10.25') === 625, 'getSeconds');
+
+
+
+var getSeconds = function(timespan) {
+	var minutesString = timespan.substring(0,2);
+	var secondsString = timespan.substring(3, 2);
+	var minutes = parseInt(minutesString);
+	var seconds = parseInt(secondsString);
+	return minutes * 60 + seconds;
+};
+
+console.log( getSeconds('01:30') === 90, 'getSeconds' );
+console.log( getSeconds('10:25') === 625, 'getSeconds' );
